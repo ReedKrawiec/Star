@@ -1,0 +1,32 @@
+---
+layout: Main
+---
+
+      <div class="blogbody">
+        <div class="blogbody__posts">
+          {% for post in paginator.posts %}
+          <div class="post">
+            <a href="{{post.url}}" class="post__title">{{post.title}}</a>
+            <p class="post__date">{{post.date | date: '%B %-d, %Y'  }}</p>
+            <p class="post__underline"></p>
+            <p class="post__body">{{ post.content | strip_html | truncatewords: 100 }}</p>
+            <a href="{{post.url}}" class="post__readme">Read Me</a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="blogbody__navigation">
+          {% if paginator.previous_page %}
+           <a href="{{ paginator.previous_page_path }}" class="navigation__item">
+             <i class="icon-left-open item__content"></i>
+           </a>
+           {% endif %}
+           <div class="navigation__item">
+             <p class="item__content">{{paginator.page}}</p>
+           </div>
+           {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}"" class="navigation__item">
+             <i class="icon-right-open item__content"></i> 
+            </a> 
+            {% endif %}
+        </div>    
+      </div>  
