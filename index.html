@@ -15,7 +15,7 @@ layout: Main
         </div>
         <div class="blogbody__navigation">
           {% if paginator.previous_page %}
-           <a href="{{ paginator.previous_page_path }}" class="navigation__item">
+           <a href="{{site.github.url}}{{ paginator.previous_page_path }}" class="navigation__item">
              <i class="icon-left-open item__content"></i>
            </a>
            {% endif %}
@@ -23,7 +23,7 @@ layout: Main
              <p class="item__content">{{paginator.page}}</p>
            </div>
            {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path }}"" class="navigation__item">
+            <a href="{{site.github.url}}{{ paginator.next_page_path }}"" class="navigation__item">
              <i class="icon-right-open item__content"></i> 
             </a> 
             {% endif %}
