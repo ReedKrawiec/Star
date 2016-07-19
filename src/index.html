@@ -1,16 +1,15 @@
 ---
 layout: Main
 ---
-      <link rel="stylesheet" type="text/css" href="./assets/css/main.min.css" />
       <div class="blogbody">
         <div class="blogbody__posts">
           {% for post in paginator.posts %}
           <div class="post">
-            <a href="{{post.url}}" class="post__title">{{post.title}}</a>
+            <a href="{{site.github.url}}{{post.url}}" class="post__title">{{post.title}}</a>
             <p class="post__date">{{post.date | date: '%B %-d, %Y'  }}</p>
             <p class="post__underline"></p>
             <p class="post__body">{{ post.content | strip_html | truncatewords: 100 }}</p>
-            <a href="{{post.url}}" class="post__readme">Read Me</a>
+            <a href="{{site.github.url}}{{post.url}}" class="post__readme">Read Me</a>
           </div>
           {% endfor %}
         </div>
