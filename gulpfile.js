@@ -82,6 +82,8 @@ gulp.task('js',function(){
     .pipe(connect.reload());
 })
 
+gulp.task('default',["js","html","css"])
+
 gulp.task('watch',()=>{
   gulp.watch('src/css/**/**.scss',['css']);
   gulp.watch('src/scripts/**/**.*',["js"]);
