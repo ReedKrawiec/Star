@@ -1,0 +1,7 @@
+# Blog settings
+permalink: /blog/:title
+paginate: 5
+gems: [jekyll-paginate]
+
+# My variables
+topleft: Lorem Ipsum
